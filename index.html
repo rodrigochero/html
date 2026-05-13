@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="stilos.css">
 </head>
 <body>
+<div id="bienvenida" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #2c3e50; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000; transition: opacity 0.5s ease; color: white; text-align: center;">
+    
+    <img src="https://media1.tenor.com/m/SNlBq5IZu0IAAAAC/son-goku.gif" alt="Bienvenido" 
+         style="width: 300px; /* Tamaño aumentado */
+                height: auto; 
+                margin-bottom: 30px; 
+                border-radius: 25px; 
+                border: 5px solid #34495e; 
+                box-shadow: 0 0 30px rgba(52, 152, 219, 0.5); /* Resplandor más fuerte */">
+    
+    <h1 style="font-family: 'Segoe UI', sans-serif; margin-bottom: 10px; font-size: 2.8rem; font-weight: 700;">¡Bienvenido a mi sitio web donde podras saber unas cosas de mi!</h1>
+    <p style="font-family: 'Segoe UI', sans-serif; color: #bdc3c7; margin-bottom: 40px; font-size: 1.2rem; letter-spacing: 1px;">DESCUBRE MI PORTAFOLIO Y PROYECTOS</p>
+    
+    <button id="btn-comenzar" style="padding: 20px 60px; font-size: 22px; cursor: pointer; background-color: #3498db; color: #fff; border: none; border-radius: 50px; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 8px 25px rgba(0,0,0,0.4); text-transform: uppercase;">
+        Comenzar Experiencia
+    </button>
+</div>
+
+<div id="contenido-sitio">
     <h1 class="nombre">Rodrigo Salvador</h1>
 </body>
 </html>
@@ -46,6 +65,19 @@
     </div>
 
 </div>
+</div> <script>
+    const boton = document.getElementById('btn-comenzar');
+    const pantallaBienvenida = document.getElementById('bienvenida');
 
+    boton.addEventListener('click', () => {
+        // Hace que la bienvenida se desvanezca
+        pantallaBienvenida.style.opacity = '0';
+        
+        // Espera a que termine la animación y elimina la pantalla
+        setTimeout(() => {
+            pantallaBienvenida.style.display = 'none';
+        }, 500);
+    });
+</script>
 </body>
 </html>
