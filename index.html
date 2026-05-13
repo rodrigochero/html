@@ -1,83 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colegio</title>
-    <link rel="stylesheet" href="stilos.css">
-</head>
-<body>
-<div id="bienvenida" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #2c3e50; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 10000; transition: opacity 0.5s ease; color: white; text-align: center;">
-    
-    <img src="https://media1.tenor.com/m/SNlBq5IZu0IAAAAC/son-goku.gif" alt="Bienvenido" 
-         style="width: 300px; /* Tamaño aumentado */
-                height: auto; 
-                margin-bottom: 30px; 
-                border-radius: 25px; 
-                border: 5px solid #34495e; 
-                box-shadow: 0 0 30px rgba(52, 152, 219, 0.5); /* Resplandor más fuerte */">
-    
-    <h1 style="font-family: 'Segoe UI', sans-serif; margin-bottom: 10px; font-size: 2.8rem; font-weight: 700;">¡Bienvenido a mi sitio web donde podras saber unas cosas de mi!</h1>
-    <p style="font-family: 'Segoe UI', sans-serif; color: #bdc3c7; margin-bottom: 40px; font-size: 1.2rem; letter-spacing: 1px;">DESCUBRE MI PORTAFOLIO Y PROYECTOS</p>
-    
-    <button id="btn-comenzar" style="padding: 20px 60px; font-size: 22px; cursor: pointer; background-color: #3498db; color: #fff; border: none; border-radius: 50px; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 8px 25px rgba(0,0,0,0.4); text-transform: uppercase;">
-        Comenzar Experiencia
-    </button>
-</div>
-
-<div id="contenido-sitio">
-    <h1 class="nombre">Rodrigo Salvador</h1>
-</body>
-</html>
-
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi página</title>
-
-    <!-- Conectar el CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio - Rodrigo Salvador</title>
+    <link rel="stylesheet" href="stilos.css">
     <link rel="stylesheet" href="estilos.css">
+    
+    <style>
+        /* Estilo para bloquear el scroll mientras está la bienvenida */
+        body.modal-abierto {
+            overflow: hidden;
+        }
+    </style>
 </head>
+<body class="modal-abierto">
 
-<body>
-
-<div class="contenedor">
-
- <a href="pagina1.html">Enlace 1</a>
- <a href="pagina2.html">Enlace 2</a>
- <a href="pagina3.html">Enlace 3</a>
-<a href="portafolio.html">Mi portafolio</a>
-
-    <div class="caja">
-        <h2>Sobre mi</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae.</p>
-    </div>
-
-    <div class="caja">
-        <h2>Proyectos</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae.</p>
-    </div>
-
-    <div class="caja">
-        <h2>Contacto</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae.</p>
-    </div>
-
-</div>
-</div> <script>
-    const boton = document.getElementById('btn-comenzar');
-    const pantallaBienvenida = document.getElementById('bienvenida');
-
-    boton.addEventListener('click', () => {
-        // Hace que la bienvenida se desvanezca
-        pantallaBienvenida.style.opacity = '0';
+    <div id="bienvenida" style="
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(44, 62, 80, 0.7); /* Azul apagado con transparencia */
+        backdrop-filter: blur(15px); /* ESTO HACE EL DESENFOQUE DETRÁS */
+        -webkit-backdrop-filter: blur(15px); 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        z-index: 10000; 
+        transition: opacity 0.5s ease; 
+        color: white; 
+        text-align: center;">
         
-        // Espera a que termine la animación y elimina la pantalla
-        setTimeout(() => {
-            pantallaBienvenida.style.display = 'none';
-        }, 500);
-    });
-</script>
+        <img src="https://media1.tenor.com/m/SNlBq5IZu0IAAAAC/son-goku.gif" alt="Bienvenido" 
+             style="width: 300px; 
+                    height: auto; 
+                    margin-bottom: 30px; 
+                    border-radius: 25px; 
+                    border: 5px solid #34495e; 
+                    box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);">
+        
+        <h1 style="font-family: 'Segoe UI', sans-serif; margin-bottom: 10px; font-size: 2.5rem; font-weight: 700; padding: 0 20px;">
+            ¡Bienvenido a mi sitio web donde podrás saber cosas de mí!
+        </h1>
+        <p style="font-family: 'Segoe UI', sans-serif; color: #bdc3c7; margin-bottom: 40px; font-size: 1.2rem; letter-spacing: 1px;">
+            DESCUBRE MI PORTAFOLIO Y PROYECTOS
+        </p>
+        
+        <button id="btn-comenzar" style="padding: 20px 60px; font-size: 22px; cursor: pointer; background-color: #3498db; color: #fff; border: none; border-radius: 50px; transition: all 0.3s ease; font-weight: bold; box-shadow: 0 8px 25px rgba(0,0,0,0.4); text-transform: uppercase;">
+            Comenzar Experiencia
+        </button>
+    </div>
+
+    <div id="contenido-sitio">
+        <h1 class="nombre" style="text-align: center; margin-top: 20px;">Rodrigo Salvador</h1>
+
+        <div class="contenedor">
+            <nav style="text-align: center; margin-bottom: 30px;">
+                <a href="pagina1.html">Enlace 1</a>
+                <a href="pagina2.html">Enlace 2</a>
+                <a href="pagina3.html">Enlace 3</a>
+                <a href="portafolio.html">Mi portafolio</a>
+            </nav>
+
+            <div class="caja">
+                <h2>Sobre mi</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="caja">
+                <h2>Proyectos</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni!</p>
+            </div>
+
+            <div class="caja">
+                <h2>Contacto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, aliquam recusandae. Amet aliquam inventore qui tenetur ab distinctio consequuntur laborum perspiciatis magni!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const boton = document.getElementById('btn-comenzar');
+        const pantallaBienvenida = document.getElementById('bienvenida');
+
+        boton.addEventListener('click', () => {
+            // Desvanece la pantalla
+            pantallaBienvenida.style.opacity = '0';
+            
+            // Permite el scroll de nuevo
+            document.body.classList.remove('modal-abierto');
+            
+            // Elimina el elemento después de la animación
+            setTimeout(() => {
+                pantallaBienvenida.style.display = 'none';
+            }, 500);
+        });
+    </script>
 </body>
 </html>
