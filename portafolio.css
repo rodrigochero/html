@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* HEADER */
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: #00bcd4;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* CAJAS */
+.caja {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* SOBRE MI (FLEX) */
+.sobre-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.texto {
+    width: 60%;
+}
+
+.perfil-lado {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* PROYECTOS */
+.proyecto {
+    margin-top: 15px;
+}
+
+.proyecto img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
